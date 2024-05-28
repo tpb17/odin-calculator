@@ -94,6 +94,7 @@ const eqButton = document.querySelector("#eqButton");
 eqButton.addEventListener("click", () => {
     if (num2Selected) {
         let result = operate(parseFloat(num1), parseFloat(num2), operator);
+        result = Math.round(result*1000)/1000
         display.textContent = result;
 
         num1Selected = false;

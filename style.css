@@ -1,0 +1,73 @@
+* {
+    font-family: Verdana, Tahoma, sans-serif;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#display {
+    background-color: black;
+    color: white;
+    font-size: 40px;
+    text-align: right;
+    width: 400px;
+    height: 50px;
+}
+
+.lowerSection {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
+
+.numbers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 75%;
+}
+
+.numBtn {
+    height: 60px;
+    flex: 0 0 33.333%;
+    background-color: green;
+}
+
+#n0 {
+    flex: 0 0 100%;
+}
+
+#operatorContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 25%;
+}
+
+.operator {
+    flex: 0 0 100%;
+    background-color: blue;
+}
+
+.lowestSection {
+    display: flex;
+    width: 400px;
+}
+
+#clearButton {
+    width: 75%;
+}
+
+#eqButton {
+    width: 25%;
+}
+
+.finalBtn {
+    height: 60px;
+    background-color: lightcoral;
+}
