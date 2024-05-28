@@ -11,11 +11,7 @@ function multiply(a, b) {
 }
 
 function divide(a, b) {
-    if (b === 0) {
-        return "error";
-    } else {
-        return a / b;
-    }
+    return a / b;
 }
 
 function operate(a, b, op) {
@@ -31,8 +27,8 @@ function operate(a, b, op) {
     }
 }
 
-let num1;
-let num2;
+let num1 = "0";
+let num2= "0";
 let operator;
 let num1Selected = false;
 let num2Selected = false;
@@ -52,13 +48,22 @@ const n9 = document.querySelector("#n9");
 const display = document.querySelector("#display");
 
 function numSelect(btn) {
-    display.textContent = btn.textContent;
-    if (!num1Selected || !operatorSelected) {
-        num1 = btn.textContent;
+    if (!operatorSelected) {
+        if (num1 === "0") {
+            num1 = btn.textContent;
+        } else {
+            num1 += btn.textContent;
+        }
         num1Selected = true;
+        display.textContent = num1;
     } else {
-        num2 = btn.textContent;
+        if (num2 === "0") {
+            num2 = btn.textContent;
+        } else {
+            num2 == btn.textContent;
+        }
         num2Selected = true;
+        display.textContent = num2;
     }
 }
 
@@ -100,6 +105,8 @@ eqButton.addEventListener("click", () => {
         num1Selected = false;
         num2Selected = false;
         operatorSelected = false;
+        num1 = "0";
+        num2 = "0";
     }
 })
 
@@ -109,4 +116,6 @@ clearButton.addEventListener("click", () => {
     num1Selected = false;
     num2Selected = false;
     operatorSelected = false;
+    num1 = "0";
+    num2 = "0";
 })
